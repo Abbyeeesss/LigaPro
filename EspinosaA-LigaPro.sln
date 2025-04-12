@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspinosaA-LigaPro", "EspinosaA-LigaPro\EspinosaA-LigaPro.csproj", "{D36129B3-B058-4034-8415-5EB94136F05D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D36129B3-B058-4034-8415-5EB94136F05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D36129B3-B058-4034-8415-5EB94136F05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D36129B3-B058-4034-8415-5EB94136F05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D36129B3-B058-4034-8415-5EB94136F05D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D771F12A-254E-43B6-A13B-94DE19FCF524}
+	EndGlobalSection
+EndGlobal
