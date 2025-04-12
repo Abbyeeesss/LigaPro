@@ -8,6 +8,7 @@ namespace EspinosaA_LigaPro.Repositories
         {
             List<Equipo> equipos = new List<Equipo>();
 
+
             Equipo ldu = new Equipo
             {
                 Id = 1,

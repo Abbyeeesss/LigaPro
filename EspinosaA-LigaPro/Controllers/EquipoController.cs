@@ -19,6 +19,7 @@ namespace EspinosaA_LigaPro.Controllers
 
             equipos = equipos.OrderBy(item => item.PartidosGanados);
             //equipos = equipos.Where(item => item.Nombre == "Liga de Quito"); 
+
             return View(equipos);
         }
     }
