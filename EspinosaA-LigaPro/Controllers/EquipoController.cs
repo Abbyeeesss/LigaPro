@@ -8,6 +8,16 @@ namespace EspinosaA_LigaPro.Controllers
 {
     public class EquipoController : Controller
     {
+        public EquipoRepository _repository;
+
+        public EquipoController()
+
+            {
+            _repository = new EquipoRepository();
+
+        }
+
+
         public ActionResult View()
         {
             return View();
@@ -15,8 +25,8 @@ namespace EspinosaA_LigaPro.Controllers
 
         public ActionResult List()
         {
-            EquipoRepository equipoRepository = new EquipoRepository();
-            var equipos = equipoRepository.DevuelveListadoEquipos();
+
+            var equipos = _repository.DevuelveListadoEquipos();
 
             equipos = equipos.OrderBy(item => item.PartidosGanados);
             //equipos = equipos.Where(item => item.Nombre == "Liga de Quito"); 
@@ -42,12 +52,16 @@ namespace EspinosaA_LigaPro.Controllers
             //proceso de guardar
             try
             {
+                EquipoRepository repository = new EquipoRepository();
+                repository.ActualizarEquipo(Id, equipo); 
                 return RedirectToAction(nameof(List));
             }
             catch
             {
                 return View();
             }
+
         }
+
     }
 }

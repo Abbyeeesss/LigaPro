@@ -4,6 +4,11 @@ namespace EspinosaA_LigaPro.Repositories
 {
     public class EquipoRepository
     {
+        public IEnumerable<Equipo> Equipo;
+        public EquipoRepository()
+        {
+            Equipo = DevuelveListadoEquipos();
+        }
         public IEnumerable<Equipo> DevuelveListadoEquipos()
         {
             List<Equipo> equipos = new List<Equipo>();
@@ -37,10 +42,18 @@ namespace EspinosaA_LigaPro.Repositories
         public Equipo DevuelveEquipoPorID(int Id)
         {
             var equipos = DevuelveListadoEquipos();
-            var equipo = equipos.First(item => item.Id == Id);
-                
+            var equipo = Equipo.First(item => item.Id == Id);
+
             return equipo;
         }
+
+        public bool ActualizarEquipo(int Id, Equipo equipo)
+        {
+            //logica de actualizacion
+            return true;
+
+        }
+
 
     }
 }
