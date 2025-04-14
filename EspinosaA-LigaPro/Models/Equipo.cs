@@ -20,7 +20,6 @@ namespace EspinosaA_LigaPro.Models
         public int PartidosEmpatados { get; set; }
         [Range(0, 100)]
         public int PartidosPerdidos { get; set; }
-        [DisplayName("Puntos")]
         public int Puntos
         {
             get

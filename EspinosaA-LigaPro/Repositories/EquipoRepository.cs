@@ -34,7 +34,13 @@ namespace EspinosaA_LigaPro.Repositories
             return equipos;
         }
 
-
+        public Equipo DevuelveEquipoPorID(int Id)
+        {
+            var equipos = DevuelveListadoEquipos();
+            var equipo = equipos.First(item => item.Id == Id);
+                
+            return equipo;
+        }
 
     }
 }
