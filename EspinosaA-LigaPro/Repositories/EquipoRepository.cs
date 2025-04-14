@@ -33,6 +33,16 @@ namespace EspinosaA_LigaPro.Repositories
                 PartidosPerdidos = 0,
                 PartidosEmpatados = 0
             };
+            Equipo emelec = new Equipo
+            {
+                Id = 3,
+                Nombre = "Emelec",
+                PartidosJugados = 8,
+                PartidosGanados = 5,
+                PartidosEmpatados = 6,
+                PartidosPerdidos = 3
+            };
+           equipos.Add(emelec);
             equipos.Add(ldu);
             equipos.Add(barcelona);
 
@@ -52,6 +62,35 @@ namespace EspinosaA_LigaPro.Repositories
             //logica de actualizacion
             return true;
 
+        }
+        public bool CrearEquipo(Equipo nuevoEquipo)
+        {
+            // Convertimos a lista para poder manipularla
+            var listaEquipos = Equipo.ToList();
+
+            // Asignamos un nuevo ID automáticamente
+            int nuevoId = listaEquipos.Count > 0 ? listaEquipos.Max(e => e.Id) + 1 : 1;
+            nuevoEquipo.Id = nuevoId;
+
+            listaEquipos.Add(nuevoEquipo);
+            Equipo = listaEquipos;
+
+            return true;
+        }
+
+        public bool EliminarEquipo(int id)
+        {
+            var listaEquipos = Equipo.ToList();
+            var equipoAEliminar = listaEquipos.FirstOrDefault(e => e.Id == id);
+
+            if (equipoAEliminar != null)
+            {
+                listaEquipos.Remove(equipoAEliminar);
+                Equipo = listaEquipos;
+                return true;
+            }
+
+            return false;
         }
 
 
