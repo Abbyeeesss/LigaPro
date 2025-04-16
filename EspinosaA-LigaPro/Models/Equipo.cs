@@ -6,13 +6,12 @@ namespace EspinosaA_LigaPro.Models
     public class Equipo
     {
         [Key]
-        [Required]
-        [MaxLength]
-        [DisplayName("Nombre del equipo")]
         public int Id { get; set; }
-        [Range(0,20)]
+        [Required]
+        [MaxLength(100)]
+        [DisplayName("Nombre del equipo")]
         public string Nombre { get; set; }
-        [Range(0, 20)]
+        [Range(0, 100)]
         public int PartidosJugados { get; set; }
         [Range(0, 100)]
         public int PartidosGanados { get; set; }
